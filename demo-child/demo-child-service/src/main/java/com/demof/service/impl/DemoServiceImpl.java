@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 @Service("demoService")
 public class DemoServiceImpl implements DemoService {
-
-    @Override
     public DemoModel findDemo() {
         DemoModel model = new DemoModel();
         model.setName("dubbo");

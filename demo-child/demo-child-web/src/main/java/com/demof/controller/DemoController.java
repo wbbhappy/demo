@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class DemoController {
-
     @Autowired
     private DemoService demoService;
 
@@ -17,8 +16,7 @@ public class DemoController {
     @ResponseBody
     public Object test(){
         DemoModel model = demoService.findDemo();
-        System.out.print("名称："+model.getName()+",年龄："+model.getAge()+",手机号码："+model.getPhone()+"\n");
-
+        System.out.print("名称：" + model.getName() + ",年龄：" + model.getAge() + ",手机号码：" + model.getPhone() + "\n");
         return model;
     }
 }

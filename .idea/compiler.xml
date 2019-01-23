@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <resourceExtensions />
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="demo-child-api" />
         <module name="demo-child-service" />
         <module name="demo-child-web" />
@@ -13,13 +18,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="demo" target="1.7" />
+      <module name="demo" target="1.8" />
       <module name="demo-api" target="1.7" />
-      <module name="demo-child" target="1.7" />
-      <module name="demo-child-api" target="1.7" />
-      <module name="demo-child-service" target="1.7" />
-      <module name="demo-child-web" target="1.7" />
-      <module name="demo-common" target="1.7" />
+      <module name="demo-child" target="1.8" />
+      <module name="demo-child-api" target="1.8" />
+      <module name="demo-child-service" target="1.8" />
+      <module name="demo-child-web" target="1.8" />
+      <module name="demo-common" target="1.8" />
       <module name="demo-order" target="1.7" />
       <module name="demo-service" target="1.7" />
       <module name="demo-web" target="1.7" />

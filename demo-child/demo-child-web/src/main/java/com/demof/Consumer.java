@@ -11,20 +11,15 @@ public class Consumer {
         System.setProperty("java.net.preferIPv4Stack", "true");
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"spring/spring.xml"});
         context.start();
-        DemoService demoService = (DemoService) context.getBean("demoService"); // get remote service proxy
-//        while (true) {
+        // get remote service proxy
+        DemoService demoService = (DemoService) context.getBean("demoService");
         try {
-//                Thread.sleep(1000);
+            //Thread.sleep(1000);
             DemoModel model = demoService.findDemo();
-
-            System.out.print("名称："+model.getName()+",年龄："+model.getAge()+",手机号码："+model.getPhone()+"\n");
-
-
+            System.out.print("名称：" + model.getName() + ",年龄：" + model.getAge() + ",手机号码：" + model.getPhone() + "\n");
         } catch (Throwable throwable) {
             System.out.print(throwable);
             throwable.printStackTrace();
         }
     }
-
-//    }
 }
