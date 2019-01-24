@@ -19,4 +19,10 @@ public class DemoController {
         System.out.print("名称：" + model.getName() + ",年龄：" + model.getAge() + ",手机号码：" + model.getPhone() + "\n");
         return model;
     }
+
+    @RequestMapping("/wbb")
+    @ResponseBody
+    public String sqy(){
+        return "HelloWord!";
+    }
 }
